@@ -23,7 +23,7 @@ StartKlar ist ein Tool, das Gründerinnen und Gründer Schritt für Schritt durc
 | Name | GitHub | Rolle |
 | --- | --- | --- |
 | Nazar Chuprii | [@Nzchupa](https://github.com/Nzchupa) | Backend, Repository |
-| Maximilian Mikusch| [@Maxi20081001] (https://github.com/Maxi20081001)| Tester, Entwickler |
+| Maximilian Mikusch| [@Maxi20081001](https://github.com/Maxi20081001)| Tester, Entwickler |
 | _Name_ | _@nutzername_ | _Rolle_ |
 | _Name_ | _@nutzername_ | _Rolle_ |
 
