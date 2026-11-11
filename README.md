@@ -11,8 +11,8 @@ StartKlar ist ein Tool, das Gründerinnen und Gründer Schritt für Schritt durc
 
 | Was | Link |
 | --- | --- |
-| Vorlesungsmaterialien (Folien, Übungen) | [Link einfügen](LINK_VORLESUNG) |
-| Unser Dokumente-Ordner (Protokolle, Präsentationen, Beleg) | [Link einfügen](LINK_DOKUMENTE) |
+| Vorlesungsmaterialien (Folien, Übungen) | [Link einfügen]((https://micloud.hs-mittweida.de/index.php/s/9JPoaqfyKaTxk8F)) |
+| Unser Dokumente-Ordner (Protokolle, Präsentationen, Beleg) | [Link einfügen]((https://micloud.hs-mittweida.de/index.php/s/G27cQJE8gwN3ztx)) |
 | GitHub-Anleitung für das Team | [GitHub-Anleitung StartKlar]((https://github.com/Nzchupa/StartKlar/blob/main/GitHub-Anleitung%20StartKlar.pdf)) |
 | Aufgaben (Issues) | [Issues](https://github.com/Nzchupa/StartKlar/issues) |
 
