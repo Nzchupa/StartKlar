@@ -11,9 +11,9 @@ StartKlar ist ein Tool, das Gründerinnen und Gründer Schritt für Schritt durc
 
 | Was | Link |
 | --- | --- |
-| Vorlesungsmaterialien (Folien, Übungen) | [Link einfügen](LINK_VORLESUNG) |
-| Unser Dokumente-Ordner (Protokolle, Präsentationen, Beleg) | [Link einfügen](LINK_DOKUMENTE) |
-| GitHub-Anleitung für das Team | [GitHub-Anleitung StartKlar](https://claude.ai/artifact/LPniiyiY4whxTCzzzv8Qn6) |
+| Vorlesungsmaterialien (Folien, Übungen) | ([LINK_VORLESUNG](https://micloud.hs-mittweida.de/index.php/s/9JPoaqfyKaTxk8F)) |
+| Unser Dokumente-Ordner (Protokolle, Präsentationen, Beleg) | ([LINK_DOKUMENTE](https://micloud.hs-mittweida.de/index.php/s/G27cQJE8gwN3ztx) |
+| GitHub-Anleitung für das Team  
 | Aufgaben (Issues) | [Issues](https://github.com/Nzchupa/StartKlar/issues) |
 
 ---
@@ -22,8 +22,8 @@ StartKlar ist ein Tool, das Gründerinnen und Gründer Schritt für Schritt durc
 
 | Name | GitHub | Rolle |
 | --- | --- | --- |
-| Nazar Chuprii | [@Nzchupa](https://github.com/Nzchupa) | Backend, Repository |
-| _Name_ | _@nutzername_ | _Rolle_ |
+| Nazar Chuprii | [@Nzchupa](https://github.com/Nzchupa) | Teamleiter |
+| Maximilian | @Maxi20081001 | Tester |
 | _Name_ | _@nutzername_ | _Rolle_ |
 | _Name_ | _@nutzername_ | _Rolle_ |
 
