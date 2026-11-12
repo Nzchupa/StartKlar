@@ -25,7 +25,7 @@ StartKlar ist ein Tool, das Gründerinnen und Gründer Schritt für Schritt durc
 | Nazar Chuprii | [@Nzchupa](https://github.com/Nzchupa) | Backend, Repository |
 | Maximilian Mikusch| [@Maxi20081001](https://github.com/Maxi20081001)| Tester, Entwickler |
 | Youssef | _@nutzername_ | UX / Usability |
-| Leon Rapp | [@lropp06](https://github.com/lropp06)|  Hauptentwickler |
+| Leon Rapp | [@lropp06](https://github.com/lrapp06)|  Hauptentwickler |
 
 ---
 
