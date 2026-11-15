@@ -51,7 +51,7 @@ Alle Anforderungen mit Priorität: [Anforderungsdokument](docs/Sprint%201/anford
 | --- | --- | --- |
 | Nazar Chuprii | [@Nzchupa](https://github.com/Nzchupa) | Backend, Repository, Sprintplanung |
 | Maximilian Mikusch | [@Maxi20081001](https://github.com/Maxi20081001) | Tester, Entwickler |
-| Youssef Al Khallaf | _@nutzername_ | UX / Usability |
+| Youssef Al Khallaf | [@yousefalkhlaf-hub](https://github.com/yousefalkhlaf-hub) | UX / Usability |
 | Leon Rapp | [@lrapp06](https://github.com/lrapp06) | Hauptentwickler |
 
 Aufgaben werden unabhängig von der Rolle frei gewählt.
