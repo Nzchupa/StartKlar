@@ -47,7 +47,6 @@ Priorität nach MoSCoW: **M** = Must, **S** = Should, **C** = Could. Aufwand = g
 | ID | Aufgabe | Ergebnis / Akzeptanzkriterium | Prio | Aufwand | Vorschlag | Fällig |
 | --- | --- | --- | --- | --- | --- | --- |
 | S1-01 | Problemstellung, Zielsetzung, Zielgruppe finalisieren | Entwurf `Problemstellung_und_Zielgruppe.md` vom Team gelesen und freigegeben | M | 2 h | Nazar + Review alle | 16.11. |
-
 | S1-02 | Funktionale Anforderungen bereinigen und ergänzen | Akteur bei allen eingetragen, Aufgaben-/Checklisten-Funktion ergänzt, mind. 10 FA | M | 3 h | Maximilian | 17.11. |
 | S1-03 | Nichtfunktionale Anforderungen prüfbar formulieren | Mind. 5 NFA nach ISO 25010, jede messbar (z. B. „8 von 10 Testpersonen …“); Randbedingungen separat (R-xx) | M | 2 h | Leon | 17.11. |
 | S1-06 | MVP abgrenzen | Liste: welche Must-Anforderungen kommen in den ersten Prototyp, was nicht | M | 2 h | alle  | 17.11. |
