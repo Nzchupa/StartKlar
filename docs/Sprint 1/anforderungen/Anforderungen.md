@@ -73,27 +73,16 @@ Kategorien nach ISO/IEC 25010.
 | NFA-06 | Kompatibilität | Das System muss mit den aktuellen Versionen von Chrome, Firefox und Edge kompatibel sein. | Must | Der Hauptablauf (Plan anlegen, ausfüllen, speichern) funktioniert in allen drei Browsern ohne Darstellungsfehler. |
 | NFA-07 | Wartbarkeit | Der Quellcode soll mit JavaDoc dokumentiert und im GitHub-Repository verwaltet werden. | Should | Alle öffentlichen Klassen und Methoden haben JavaDoc; Änderungen gelangen nur per Pull Request in `main`. |
 | NFA-08 | Gestaltung | Die Benutzeroberfläche soll auf allen Seiten ein einheitliches Design besitzen. | Should | Farben, Schaltflächen und Navigation sind auf allen Seiten einheitlich gestaltet. |
-
 | NFA-09 | Fehlerbehandlung | Das System soll bei fehlerhaften Eingaben verständliche Fehlermeldungen anzeigen. | Should | Bei ungültigen Eingaben erscheint eine verständliche Fehlermeldung ohne technische Fehlercodes. |
-
 | NFA-10 | Barrierefreiheit | Die Webanwendung soll vollständig über die Tastatur bedienbar sein. | Should | Alle wesentlichen Funktionen sind ohne Maus erreichbar und bedienbar. |
-
 | NFA-11 | Lesbarkeit | Die Benutzeroberfläche soll ausreichend hohe Kontraste zwischen Text und Hintergrund aufweisen. | Should | Normaler Text besitzt ein Kontrastverhältnis von mindestens 4,5:1. |
-
 | NFA-12 | Responsivität | Die Webanwendung soll sich automatisch an unterschiedliche Bildschirmgrößen anpassen. | Should | Die Anwendung ist im Browser auf PC, Tablet und Smartphone ohne überlaufende Formulare nutzbar. |
-
 | NFA-13 | Übertragungssicherheit | Die Datenübertragung zwischen Browser und Server muss bei öffentlicher Bereitstellung verschlüsselt erfolgen. | Must | Alle Seiten und Serveranfragen werden über HTTPS übertragen. |
-
 | NFA-14 | Zugriffsschutz | Das System muss sicherstellen, dass Nutzer ausschließlich auf ihre eigenen Businesspläne zugreifen können. | Must | Mit zwei Testkonten wird überprüft, dass kein Zugriff auf fremde Businesspläne möglich ist. |
-
 | NFA-15 | Zuverlässigkeit | Bereits erfolgreich gespeicherte Daten müssen auch nach einem Neustart des Systems vollständig erhalten bleiben. | Must | Nach dem Neustart sind alle zuvor gespeicherten Testdaten unverändert vorhanden. |
-
 | NFA-16 | Berechnungsgenauigkeit | Das System muss finanzielle Berechnungen mathematisch korrekt und mit einer Genauigkeit von zwei Nachkommastellen durchführen. | Must | Mindestens drei Testrechnungen mit bekannten Ergebnissen liefern korrekte Geldbeträge. |
-
 | NFA-17 | Erweiterbarkeit | Der Quellcode soll modular aufgebaut sein, sodass einzelne Funktionen unabhängig voneinander angepasst werden können. | Should | Die Finanzberechnung ist von der Darstellung der Benutzeroberfläche getrennt. |
-
 | NFA-18 | Ausgabequalität | Exportierte Businesspläne sollen ein einheitliches und gut lesbares Layout besitzen. | Should | Bei einem PDF-Testexport sind alle Texte vollständig lesbar und keine Inhalte abgeschnitten. |
-
 | NFA-19 | Bedienkonzept | Die Anwendung muss ohne externe Tabellenkalkulationsprogramme wie Microsoft Excel nutzbar sein. | Must | Ein vollständiger Businessplan einschließlich Finanzplanung lässt sich ausschließlich innerhalb der Webanwendung erstellen. |
 
 ---
