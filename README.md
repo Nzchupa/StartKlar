@@ -71,7 +71,8 @@ Aufgaben werden unabhängig von der Rolle frei gewählt.
 
 ## 🛠️ Technik
 
-- **Sprache:** Java (Backend), HTML (Frontend) – endgültige Entscheidung in Sprint 1 (Issue #7)
+- **Backend:** Java 21, Spring Boot 4.1, Maven (über den Maven Wrapper, keine Installation nötig)
+- **Frontend:** HTML, CSS, JavaScript ohne Framework, ausgeliefert vom Backend
 - **IDE:** freie Wahl; die Anleitung beschreibt Eclipse IDE for Java Developers
 - **Versionsverwaltung:** Git + GitHub
 - **Kommunikation:** WhatsApp (Absprachen), Discord (Online-Meetings), GitHub (Code, Aufgaben, Dokumente)
@@ -91,6 +92,51 @@ Aufgaben werden unabhängig von der Rolle frei gewählt.
 3. In Eclipse öffnen: **File → Import… → Git → Projects from Git (with smart import) → Existing local repository** → Ordner `StartKlar` wählen → **Finish**.
 
 Ausführlich mit Screenshots: [GitHub-Anleitung StartKlar (PDF)](GitHub-Anleitung%20StartKlar.pdf)
+
+### Anwendung starten
+
+**Voraussetzung:** JDK 21. Im Terminal prüfen:
+
+```bash
+java -version
+```
+
+Die Ausgabe muss `21` enthalten. Falls nicht: [Eclipse Temurin 21](https://adoptium.net/temurin/releases/?version=21) installieren und das Terminal neu öffnen.
+Maven muss **nicht** installiert sein, das erledigt der Maven Wrapper (`mvnw`) beim ersten Start.
+
+**Im Terminal** (aus dem Projektordner `StartKlar`):
+
+```bash
+cd backend
+```
+
+| | Windows (PowerShell / CMD) | macOS / Linux |
+| --- | --- | --- |
+| Starten | `.\mvnw.cmd spring-boot:run` | `./mvnw spring-boot:run` |
+| Tests ausführen | `.\mvnw.cmd test` | `./mvnw test` |
+
+Der erste Start dauert etwas länger, weil Maven und die Bibliotheken heruntergeladen werden. Danach im Browser öffnen:
+
+- **http://localhost:8080** → Startseite
+- **http://localhost:8080/api/status** → `{"status":"ok","application":"StartKlar"}`
+
+Beenden mit **Strg + C** im Terminal.
+
+**In Eclipse:**
+
+1. **File → Import… → Maven → Existing Maven Projects** → Ordner `backend` wählen → **Finish**.
+2. `src/main/java/de/startklar/StartKlarApplication.java` öffnen.
+3. Rechtsklick → **Run As → Java Application**, dann http://localhost:8080 öffnen.
+
+**Häufige Probleme:**
+
+| Problem | Lösung |
+| --- | --- |
+| `Port 8080 was already in use` | Das Backend läuft schon in einem anderen Fenster. Dort mit Strg + C beenden. |
+| `release version 21 not supported` | Ein älteres JDK ist aktiv. JDK 21 installieren und `JAVA_HOME` darauf setzen. |
+| `./mvnw: Permission denied` (macOS/Linux) | Einmal `chmod +x mvnw` ausführen. |
+
+Mehr Details: [backend/README.md](backend/README.md) · [frontend/README.md](frontend/README.md)
 
 ---
 
@@ -117,8 +163,15 @@ Ausführlich mit Screenshots: [GitHub-Anleitung StartKlar (PDF)](GitHub-Anleitun
 StartKlar/
 ├── README.md
 ├── GitHub-Anleitung StartKlar.pdf
+├── backend/                   Java + Spring Boot (Backend-Team)
+│   └── src/main/java/de/startklar/
+│       ├── controller/  service/  repository/
+│       └── model/  dto/  config/  exception/
+├── frontend/                  HTML, CSS, JavaScript (Frontend-Team)
+│   ├── index.html
+│   └── pages/  css/  js/  assets/
 └── docs/
-    ├── Presentation/          Präsentationen (Sprint 0)
+    ├── Presentation/          Präsentationen
     └── Sprint 1/
         ├── Problemstellung_und_Zielgruppe.md
         ├── Sprintplan_Sprint_1.md
@@ -126,4 +179,5 @@ StartKlar/
         └── User-Case/         Use-Case-Diagramm
 ```
 
-Der Quellcode kommt in einen eigenen Ordner, sobald das Java-Projekt angelegt ist (Sprint 1, MVP-01).
+Das Backend-Team arbeitet nur in `backend/`, das Frontend-Team nur in `frontend/`.
+Verbunden sind beide über die Endpunkte `/api/...` (Liste in [backend/README.md](backend/README.md#endpunkte)).

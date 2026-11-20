@@ -1,0 +1,55 @@
+/*
+ * base.css – Grundeinstellungen für alle Seiten
+ *
+ * Hier stehen nur allgemeine Regeln für HTML-Elemente (body, h1, p, a, ...),
+ * keine Klassen für einzelne Bereiche. Dafür gibt es layout.css und components.css.
+ */
+
+/* Einheitliche Größenberechnung: Rahmen und Innenabstand zählen zur Breite */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 var(--space-m);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+p {
+    margin: 0 0 var(--space-m);
+}
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Sichtbarer Fokus für Bedienung per Tastatur (NFA-10) */
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}

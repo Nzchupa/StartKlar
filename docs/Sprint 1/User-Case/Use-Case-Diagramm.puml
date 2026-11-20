@@ -1,0 +1,85 @@
+@startuml Use-Case-Diagramm
+' StartKlar – Use-Case-Diagramm
+' Gruppe 5 · Einführung in die Informatik I · HS Mittweida · WS 2026/27
+' Version 0.1 · Stand: 17.11.2026 · Grundlage: Anforderungen.md v0.2
+
+left to right direction
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam packageStyle rectangle
+skinparam ArrowColor #444444
+skinparam usecase {
+  BackgroundColor #FFFFFF
+  BorderColor #555555
+  BackgroundColor<<MVP>> #D6EAF8
+  BorderColor<<MVP>> #1F618D
+}
+skinparam actor {
+  BorderColor #333333
+  BackgroundColor #FFFFFF
+}
+hide stereotype
+
+title StartKlar – Use-Case-Diagramm (v0.1, 17.11.2026)
+
+actor "Gründer/in" as G
+
+rectangle "StartKlar (Businessplantool)" {
+
+  usecase "Registrieren /\nAnmelden\n(FA-01)" as UC01
+
+  usecase "Businessplan anlegen\n(FA-02)" as UC02 <<MVP>>
+  usecase "Branche wählen\n(FA-10)" as UC10 <<MVP>>
+  usecase "Vorlage mit Gliederung\nladen (FA-11)" as UC11 <<MVP>>
+  usecase "Branchenhinweise\nanzeigen (FA-12)" as UC12
+  usecase "Vergleichbare Unternehmen\nanzeigen (FA-13)" as UC13
+  usecase "Einstellungen aus altem\nPlan importieren (FA-17)" as UC17
+
+  usecase "Kapitel schrittweise\nbearbeiten (FA-03)" as UC03 <<MVP>>
+  usecase "Eingaben speichern\n(FA-04)" as UC04 <<MVP>>
+  usecase "Hilfetexte und Beispiele\nanzeigen (FA-05)" as UC05 <<MVP>>
+  usecase "Fachbegriffe\nnachschlagen (FA-15)" as UC15
+  usecase "Persona anlegen\n(FA-20)" as UC20
+
+  usecase "Mitarbeiter und Kosten\neintragen (FA-16)" as UC16 <<MVP>>
+  usecase "Gewinn / Verlust\nberechnen (FA-14)" as UC14 <<MVP>>
+  usecase "Finanzkennzahlen\nberechnen (FA-07)" as UC07
+
+  usecase "Fortschritt anzeigen\n(FA-06)" as UC06
+  usecase "Unternehmensziele\nverwalten (FA-21)" as UC21
+  usecase "Businesspläne verwalten\nund löschen (FA-09)" as UC09
+  usecase "Abschnitte ausblenden\n(FA-18)" as UC18
+  usecase "Businessplan als PDF\nexportieren (FA-08/FA-19)" as UC19
+}
+
+G --> UC01
+G --> UC02
+G --> UC03
+G --> UC16
+G --> UC06
+G --> UC21
+G --> UC09
+G --> UC18
+G --> UC19
+
+UC02 ..> UC10 : <<include>>
+UC02 ..> UC11 : <<include>>
+UC12 ..> UC10 : <<extend>>
+UC13 ..> UC10 : <<extend>>
+UC17 ..> UC02 : <<extend>>
+
+UC03 ..> UC04 : <<include>>
+UC05 ..> UC03 : <<extend>>
+UC15 ..> UC03 : <<extend>>
+UC20 ..> UC03 : <<extend>>
+
+UC16 ..> UC14 : <<include>>
+UC07 ..> UC14 : <<extend>>
+
+legend right
+  |<back:#D6EAF8>      </back>| Teil des MVP (Sprint 1, 26.11.2026) |
+  |<back:#FFFFFF>      </back>| spätere Sprints |
+endlegend
+
+@enduml

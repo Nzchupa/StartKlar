@@ -1,0 +1,18 @@
+# Zeilenenden einheitlich halten, egal ob Windows, macOS oder Linux
+* text=auto
+
+# Shell-Skripte brauchen LF, sonst laufen sie unter macOS/Linux nicht
+mvnw text eol=lf
+*.sh text eol=lf
+
+# Windows-Skripte brauchen CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binärdateien nicht verändern
+*.png binary
+*.jpg binary
+*.pdf binary
+*.pptx binary
+*.docx binary
+*.xlsx binary

@@ -1,0 +1,24 @@
+/*
+ * components.css – wiederverwendbare Bausteine
+ *
+ * Hier kommen Klassen für Elemente, die auf mehreren Seiten vorkommen:
+ * Buttons (.button), Karten (.card), Formularfelder (.form-field), Hinweise (.notice) usw.
+ * Jeder Baustein bekommt einen eigenen Abschnitt mit kurzem Kommentar.
+ * Farben und Abstände immer aus variables.css nehmen.
+ */
+
+/* Einleitungstext unter einer Überschrift */
+.lead {
+    font-size: var(--font-size-lead);
+    color: var(--color-text-muted);
+    max-width: 40rem;
+}
+
+/* Anzeige, ob das Backend erreichbar ist (Footer) */
+.backend-status--ok {
+    color: var(--color-success);
+}
+
+.backend-status--error {
+    color: var(--color-error);
+}
