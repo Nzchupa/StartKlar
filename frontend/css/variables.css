@@ -1,0 +1,43 @@
+/*
+ * variables.css – zentrale Design-Werte (Design Tokens)
+ *
+ * Alle Farben, Schriften, Abstände und Radien werden NUR hier festgelegt.
+ * In den anderen CSS-Dateien werden sie mit var(--name) benutzt, z. B.:
+ *     color: var(--color-primary);
+ * So reicht eine Änderung hier, um das Design überall anzupassen (NFA-08).
+ *
+ * Die Werte sind vorläufig und werden vom Design-Team ersetzt.
+ */
+
+:root {
+    /* Farben */
+    --color-primary: #1f5fa8;
+    --color-primary-dark: #174a83;
+    --color-text: #1d1d1f;
+    --color-text-muted: #5f6368;
+    --color-background: #ffffff;
+    --color-surface: #f4f6f8;
+    --color-border: #d9dde3;
+    --color-success: #1e7d32;
+    --color-error: #b3261e;
+
+    /* Schrift */
+    --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-size-base: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-lead: 1.125rem;
+    --font-size-h1: 2.25rem;
+    --font-size-h2: 1.5rem;
+    --line-height: 1.6;
+
+    /* Abstände */
+    --space-xs: 0.25rem;
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --space-xl: 4rem;
+
+    /* Sonstiges */
+    --radius: 6px;
+    --container-width: 960px;
+}

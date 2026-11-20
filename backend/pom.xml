@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Maven-Konfiguration für das StartKlar-Backend.
+
+  Hier steht, welche Java-Version wir nutzen und welche Bibliotheken (Dependencies)
+  Maven herunterladen soll. Neue Bibliotheken werden im Block <dependencies> ergänzt.
+  Danach einmal neu bauen: mvnw clean package (bzw. mvnw.cmd unter Windows).
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Spring Boot gibt passende Versionen für alle Spring-Bibliotheken vor -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.2</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>de.startklar</groupId>
+    <artifactId>startklar-backend</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <name>StartKlar Backend</name>
+    <description>Backend des Businessplantools StartKlar (Gruppe 5, HS Mittweida)</description>
+
+    <properties>
+        <java.version>21</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Webserver (Tomcat) und REST-Controller mit Spring MVC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
+        </dependency>
+
+        <!-- Startet die Anwendung bei Code-Änderungen automatisch neu (nur Entwicklung) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Tests: JUnit, MockMvc, AssertJ -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Ermöglicht "mvnw spring-boot:run" und baut eine ausführbare JAR-Datei -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
