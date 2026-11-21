@@ -1,0 +1,35 @@
+# Führt die Backend-Tests bei jedem Pull Request und jedem Push auf main aus.
+name: Backend-Tests
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend-tests.yml"
+  push:
+    branches: [main]
+    paths:
+      - "backend/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v5
+
+      - name: Java 21 einrichten
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Tests ausführen
+        run: ./mvnw -B test
