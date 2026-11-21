@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Businessplan & Ergebnis – StartKlar</title>
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+        .main-nav { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
+        .main-nav a { text-decoration: none; padding: 6px 12px; border-radius: 4px; background: #f0f0f0; color: #333; }
+        .main-nav a.active { background: #0056b3; color: #fff; }
+        .summary-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; background: #fff; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
+        .kpi { padding: 15px; border-radius: 6px; background: #f8f9fa; border-left: 4px solid #0056b3; }
+        .kpi.profit { border-left-color: #28a745; }
+        .kpi span { display: block; font-size: 0.9em; color: #666; }
+        .kpi strong { font-size: 1.4em; }
+        .btn-group { margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; font-size: 1em; }
+        .btn-success { background: #28a745; color: #fff; }
+        .btn-primary { background: #0056b3; color: #fff; }
+        .btn-secondary { background: #e0e0e0; color: #333; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-logo" href="../index.html">StartKlar</a>
+            <nav class="main-nav">
+                <a href="../index.html">Startseite</a>
+                <a href="unternehmensdaten.html">1. Unternehmensdaten</a>
+                <a href="kosten-umsatz.html">2. Kosten & Umsatz</a>
+                <a href="businessplan.html" class="active">3. Businessplan & Ergebnis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <div class="container">
+            <h1>3. Businessplan – Übersicht & Ergebnisse</h1>
+            <p>Zusammenfassung Ihrer eingegebenen Daten und finanzielle Auswertung (Beispieldaten).</p>
+
+            <div class="summary-card">
+                <h2>Unternehmensprofil</h2>
+                <p><strong>Unternehmensname:</strong> TechStart Solutions (GmbH)</p>
+                <p><strong>Branche:</strong> IT & Webentwicklung</p>
+                <p><strong>Beschreibung:</strong> Entwicklung einer digitalen Plattform zur einfachen Erstellung von Businessplänen für Gründer.</p>
+            </div>
+
+            <div class="summary-card">
+                <h2>Finanzielle Ergebnisse (Monatlich)</h2>
+                <div class="kpi-grid">
+                    <div class="kpi">
+                        <span>Gesamtumsatz</span>
+                        <strong>7.000,00 €</strong>
+                    </div>
+                    <div class="kpi">
+                        <span>Gesamtkosten</span>
+                        <strong>4.000,00 €</strong>
+                    </div>
+                    <div class="kpi profit">
+                        <span>Erwarteter Gewinn</span>
+                        <strong>+ 3.000,00 €</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a href="kosten-umsatz.html" class="btn btn-secondary">&larr; Zurück</a>
+                <button class="btn btn-primary" onclick="alert('Businessplan wurde gespeichert!')">Businessplan speichern</button>
+                <button class="btn btn-success" onclick="window.print()">Als PDF / Drucken exportieren</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Gruppe 5 · Hochschule Mittweida · WS 2026/27</span>
+            <span id="backend-status" class="backend-status">Klick-Prototyp (Vorschau)</span>
+        </div>
+    </footer>
+</body>
+</html>

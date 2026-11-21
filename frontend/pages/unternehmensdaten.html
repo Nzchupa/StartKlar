@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unternehmensdaten – StartKlar</title>
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+        .main-nav { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
+        .main-nav a { text-decoration: none; padding: 6px 12px; border-radius: 4px; background: #f0f0f0; color: #333; }
+        .main-nav a.active { background: #0056b3; color: #fff; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; max-width: 500px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .btn-group { margin-top: 25px; display: flex; gap: 15px; }
+        .btn { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+        .btn-primary { background: #0056b3; color: #fff; }
+        .btn-secondary { background: #e0e0e0; color: #333; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-logo" href="../index.html">StartKlar</a>
+            <nav class="main-nav">
+                <a href="../index.html">Startseite</a>
+                <a href="unternehmensdaten.html" class="active">1. Unternehmensdaten</a>
+                <a href="kosten-umsatz.html">2. Kosten & Umsatz</a>
+                <a href="businessplan.html">3. Businessplan & Ergebnis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <div class="container">
+            <h1>1. Unternehmensdaten</h1>
+            <p>Bitte geben Sie die grundlegenden Informationen zu Ihrem Unternehmen ein.</p>
+
+            <form>
+                <div class="form-group">
+                    <label for="company-name">Unternehmensname *</label>
+                    <input type="text" id="company-name" placeholder="z. B. TechStart GmbH" value="TechStart Solutions">
+                </div>
+
+                <div class="form-group">
+                    <label for="legal-form">Rechtsform</label>
+                    <select id="legal-form">
+                        <option>Einzelunternehmen</option>
+                        <option selected>GmbH</option>
+                        <option>UG (haftungsbeschränkt)</option>
+                        <option>GbR</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="industry">Branche</label>
+                    <input type="text" id="industry" placeholder="z. B. Softwareentwicklung / Gastronomie" value="IT & Webentwicklung">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Geschäftsidee / Beschreibung *</label>
+                    <textarea id="description" rows="4" placeholder="Beschreiben Sie kurz Ihr Vorhaben...">Entwicklung einer digitalen Plattform zur einfachen Erstellung von Businessplänen für Gründer.</textarea>
+                </div>
+
+                <div class="btn-group">
+                    <a href="../index.html" class="btn btn-secondary">&larr; Zurück</a>
+                    <a href="kosten-umsatz.html" class="btn btn-primary">Weiter zu Kosten & Umsatz &rarr;</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Gruppe 5 · Hochschule Mittweida · WS 2026/27</span>
+            <span id="backend-status" class="backend-status">Klick-Prototyp (Vorschau)</span>
+        </div>
+    </footer>
+</body>
+</html>
