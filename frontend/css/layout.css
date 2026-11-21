@@ -1,55 +1,105 @@
 /*
- * layout.css – Grundaufbau der Seite
- *
- * Header, Hauptbereich, Footer und der zentrierte Container.
- * Diese Bereiche sind auf allen Seiten gleich.
+ * Seitenlayout: Container, Header, Navigation, Hauptbereich und Footer.
  */
-
-/* Zentriert den Inhalt und begrenzt die Breite */
 .container {
-    width: 100%;
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--space-m);
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
 }
 
-/* Footer bleibt unten, auch wenn die Seite wenig Inhalt hat */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.site-main {
-    flex: 1;
-    padding: var(--space-xl) 0;
-}
-
-/* Header */
 .site-header {
-    border-bottom: 1px solid var(--color-border);
-    padding: var(--space-m) 0;
+  position: relative;
+  z-index: 2;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.03);
+  padding: 1rem 0;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-l);
+  flex-wrap: wrap;
 }
 
 .site-logo {
-    font-weight: 700;
-    font-size: var(--font-size-lead);
-    color: var(--color-text);
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+.site-logo::before {
+  content: "S";
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.65rem;
+  color: white;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  font-size: 1rem;
 }
 
-/* Footer */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+.main-nav a:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+.main-nav a.active {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.site-main { flex: 1; padding: clamp(2rem, 5vw, 4rem) 0; }
+.site-main .container > h1 { max-width: 850px; }
+.site-main .container > h1 + p { max-width: 760px; }
+
 .site-footer {
-    border-top: 1px solid var(--color-border);
-    background-color: var(--color-surface);
-    padding: var(--space-m) 0;
-    font-size: var(--font-size-small);
-    color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 1.25rem 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-s);
 }
 
-.site-footer .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: var(--space-s);
+@media (max-width: 760px) {
+  .site-header .container { align-items: flex-start; }
+  .main-nav { width: 100%; }
+  .main-nav a { padding-inline: 0.7rem; }
+  .site-main { padding-block: 2rem; }
 }
