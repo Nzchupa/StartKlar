@@ -48,7 +48,7 @@ Alle Anforderungen mit Priorität: [Anforderungsdokument](docs/Sprint%201/anford
 ## 👥 Team
 
 | Name | GitHub | Rolle |
-| --- | --- | --- |
+| ali khdeir | [@khdeirali9](https://github.com/khdeirali9-ops) | Frontend,dokumentation |
 | Nazar Chuprii | [@Nzchupa](https://github.com/Nzchupa) | Backend, Repository, Sprintplanung |
 | Maximilian Mikusch | [@Maxi20081001](https://github.com/Maxi20081001) | Tester, Entwickler |
 | Youssef Al Khallaf | [@yousefalkhlaf-hub](https://github.com/yousefalkhlaf-hub) | UX / Usability |
