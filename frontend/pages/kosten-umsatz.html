@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosten & Umsatz – StartKlar</title>
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+        .main-nav { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
+        .main-nav a { text-decoration: none; padding: 6px 12px; border-radius: 4px; background: #f0f0f0; color: #333; }
+        .main-nav a.active { background: #0056b3; color: #fff; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .box { border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; }
+        .form-group { margin-bottom: 12px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 4px; }
+        .form-group input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        .btn-group { margin-top: 25px; display: flex; gap: 15px; }
+        .btn { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+        .btn-primary { background: #0056b3; color: #fff; }
+        .btn-secondary { background: #e0e0e0; color: #333; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-logo" href="../index.html">StartKlar</a>
+            <nav class="main-nav">
+                <a href="../index.html">Startseite</a>
+                <a href="unternehmensdaten.html">1. Unternehmensdaten</a>
+                <a href="kosten-umsatz.html" class="active">2. Kosten & Umsatz</a>
+                <a href="businessplan.html">3. Businessplan & Ergebnis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <div class="container">
+            <h1>2. Kostenplanung und Umsatzplanung</h1>
+            <p>Erfassen Sie hier Ihre monatlichen Ausgaben und erwarteten Einnahmen (in €).</p>
+
+            <div class="grid-2">
+                <div class="box">
+                    <h2>Kostenplanung (Monatlich)</h2>
+                    <div class="form-group">
+                        <label>Miete & Nebenkosten (€)</label>
+                        <input type="number" value="800">
+                    </div>
+                    <div class="form-group">
+                        <label>Personalkosten (€)</label>
+                        <input type="number" value="2500">
+                    </div>
+                    <div class="form-group">
+                        <label>Marketing & Werbung (€)</label>
+                        <input type="number" value="400">
+                    </div>
+                    <div class="form-group">
+                        <label>Sonstige Betriebskosten (€)</label>
+                        <input type="number" value="300">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h2>Umsatzplanung (Monatlich)</h2>
+                    <div class="form-group">
+                        <label>Produktverkäufe (€)</label>
+                        <input type="number" value="4500">
+                    </div>
+                    <div class="form-group">
+                        <label>Dienstleistungen / Abos (€)</label>
+                        <input type="number" value="2000">
+                    </div>
+                    <div class="form-group">
+                        <label>Sonstige Einnahmen (€)</label>
+                        <input type="number" value="500">
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a href="unternehmensdaten.html" class="btn btn-secondary">&larr; Zurück</a>
+                <a href="businessplan.html" class="btn btn-primary">Ergebnis anzeigen &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Gruppe 5 · Hochschule Mittweida · WS 2026/27</span>
+            <span id="backend-status" class="backend-status">Klick-Prototyp (Vorschau)</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,49 +1,60 @@
 <!DOCTYPE html>
-<!--
-  Startseite von StartKlar.
-  Aufbau jeder Seite: Header (Kopfzeile) -> Main (Inhalt) -> Footer (Fußzeile).
-  Neue Seiten werden aus pages/vorlage.html kopiert, nicht aus dieser Datei.
--->
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StartKlar – Businessplantool</title>
-    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 
-    <!-- Reihenfolge der CSS-Dateien nicht ändern: Variablen zuerst -->
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        .main-nav { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
+        .main-nav a { text-decoration: none; padding: 6px 12px; border-radius: 4px; background: #f0f0f0; color: #333; }
+        .main-nav a.active { background: #0056b3; color: #fff; }
+        .btn-primary { display: inline-block; padding: 12px 24px; background: #0056b3; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-top: 20px; background: #fff; }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-            <a class="site-logo" href="/">StartKlar</a>
+            <a class="site-logo" href="index.html">StartKlar</a>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Startseite</a>
+                <a href="pages/unternehmensdaten.html">1. Unternehmensdaten</a>
+                <a href="pages/kosten-umsatz.html">2. Kosten & Umsatz</a>
+                <a href="pages/businessplan.html">3. Businessplan & Ergebnis</a>
+            </nav>
         </div>
     </header>
 
     <main class="site-main">
         <div class="container">
-            <h1>StartKlar</h1>
+            <h1>Willkommen bei StartKlar</h1>
             <p class="lead">
-                Hier entsteht die Webanwendung StartKlar mit Design und Inhalten.
-                Bisher gibt es nur das technische Grundgerüst, gebaut wird gerade.
+                Erstellen Sie Ihren professionellen Businessplan Schritt für Schritt – einfach, strukturiert und übersichtlich.
             </p>
+
+            <div class="card">
+                <h2>So funktioniert es:</h2>
+                <ul>
+                    <li><strong>Schritt 1:</strong> Grundlegende Unternehmensdaten eingeben</li>
+                    <li><strong>Schritt 2:</strong> Geplante Kosten und Umsätze erfassen</li>
+                    <li><strong>Schritt 3:</strong> Finanzielle Ergebnisse prüfen und Businessplan exportieren</li>
+                </ul>
+                <a href="pages/unternehmensdaten.html" class="btn-primary">Jetzt Businessplan starten &rarr;</a>
+            </div>
         </div>
     </main>
 
     <footer class="site-footer">
         <div class="container">
             <span>Gruppe 5 · Hochschule Mittweida · WS 2026/27</span>
-            <!-- Wird von js/main.js ausgefüllt -->
-            <span id="backend-status" class="backend-status">Backend wird geprüft …</span>
+            <span id="backend-status" class="backend-status">Klick-Prototyp (Vorschau)</span>
         </div>
     </footer>
-
-    <!-- Reihenfolge der Skripte nicht ändern: api.js wird von main.js benutzt -->
-    <script src="/js/api.js" defer></script>
-    <script src="/js/main.js" defer></script>
 </body>
 </html>
