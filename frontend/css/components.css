@@ -1,24 +1,140 @@
 /*
- * components.css – wiederverwendbare Bausteine
- *
- * Hier kommen Klassen für Elemente, die auf mehreren Seiten vorkommen:
- * Buttons (.button), Karten (.card), Formularfelder (.form-field), Hinweise (.notice) usw.
- * Jeder Baustein bekommt einen eigenen Abschnitt mit kurzem Kommentar.
- * Farben und Abstände immer aus variables.css nehmen.
+ * Wiederverwendbare UI-Bausteine.
  */
-
-/* Einleitungstext unter einer Überschrift */
 .lead {
-    font-size: var(--font-size-lead);
-    color: var(--color-text-muted);
-    max-width: 40rem;
+  max-width: 48rem;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lead);
 }
 
-/* Anzeige, ob das Backend erreichbar ist (Footer) */
-.backend-status--ok {
-    color: var(--color-success);
+.card, .box, .summary-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: var(--shadow-card);
+}
+.card { margin-top: var(--space-xl); }
+.box { min-width: 0; }
+.summary-card { margin-bottom: var(--space-l); }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-l);
+  margin-top: var(--space-xl);
+}
+@media (max-width: 720px) {
+  .grid-2 { grid-template-columns: 1fr; }
 }
 
-.backend-status--error {
-    color: var(--color-error);
+.form-group { margin-bottom: var(--space-l); }
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+  font-weight: 650;
+}
+.form-group input,
+.form-group select,
+.form-group textarea,
+input[type="text"], input[type="email"], input[type="password"], input[type="number"],
+select, textarea {
+  width: 100%;
+  min-height: 2.8rem;
+  padding: 0.75rem 0.9rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+textarea { resize: vertical; }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: #94a3b8; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin-top: var(--space-xl);
+}
+.btn, .btn-primary, .btn-secondary, .btn-success, button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.8rem;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 120ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+.btn:hover, .btn-primary:hover, .btn-secondary:hover, .btn-success:hover, button:hover {
+  transform: translateY(-1px);
+}
+.btn-primary, .btn.btn-primary {
+  color: #fff;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-primary:hover, .btn.btn-primary:hover {
+  color: #fff;
+  background: var(--color-primary-hover);
+}
+.btn-secondary, .btn.btn-secondary {
+  color: var(--color-text);
+  background: var(--color-surface);
+  border-color: var(--color-border-strong);
+}
+.btn-secondary:hover, .btn.btn-secondary:hover { background: var(--color-surface-subtle); }
+.btn-success, .btn.btn-success {
+  color: #fff;
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+.btn-success:hover, .btn.btn-success:hover { color: #fff; background: #166534; }
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-m);
+  margin-top: var(--space-l);
+}
+.kpi {
+  min-width: 0;
+  padding: 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-subtle);
+}
+.kpi span {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+.kpi strong { display: block; font-size: clamp(1.25rem, 2.5vw, 1.75rem); line-height: 1.2; }
+.kpi.profit { background: var(--color-success-soft); border-color: #bbf7d0; }
+.kpi.profit strong { color: var(--color-success); }
+
+.backend-status { color: var(--color-text-muted); }
+.backend-status--ok { color: var(--color-success); }
+.backend-status--error { color: var(--color-error); }
+
+@media (max-width: 720px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+  .btn-group > a, .btn-group > button { flex: 1 1 auto; }
 }
