@@ -1,43 +1,58 @@
 /*
- * variables.css – zentrale Design-Werte (Design Tokens)
- *
- * Alle Farben, Schriften, Abstände und Radien werden NUR hier festgelegt.
- * In den anderen CSS-Dateien werden sie mit var(--name) benutzt, z. B.:
- *     color: var(--color-primary);
- * So reicht eine Änderung hier, um das Design überall anzupassen (NFA-08).
- *
- * Die Werte sind vorläufig und werden vom Design-Team ersetzt.
+ * StartKlar Designsystem – Entwurf v1
+ * Zentrale Design-Tokens: Farben, Typografie, Abstände und Radien.
+ * Werte können nach Team-Review zentral angepasst werden.
  */
-
 :root {
-    /* Farben */
-    --color-primary: #1f5fa8;
-    --color-primary-dark: #174a83;
-    --color-text: #1d1d1f;
-    --color-text-muted: #5f6368;
-    --color-background: #ffffff;
-    --color-surface: #f4f6f8;
-    --color-border: #d9dde3;
-    --color-success: #1e7d32;
-    --color-error: #b3261e;
+  color-scheme: light;
 
-    /* Schrift */
-    --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    --font-size-base: 1rem;
-    --font-size-small: 0.875rem;
-    --font-size-lead: 1.125rem;
-    --font-size-h1: 2.25rem;
-    --font-size-h2: 1.5rem;
-    --line-height: 1.6;
+  /* Farbpalette: ruhiges Blau + frisches Türkis */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-soft: #eff6ff;
+  --color-accent: #0f766e;
+  --color-accent-soft: #ecfdf5;
 
-    /* Abstände */
-    --space-xs: 0.25rem;
-    --space-s: 0.5rem;
-    --space-m: 1rem;
-    --space-l: 2rem;
-    --space-xl: 4rem;
+  --color-text: #172033;
+  --color-text-muted: #64748b;
+  --color-background: #f6f8fc;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-success: #15803d;
+  --color-success-soft: #f0fdf4;
+  --color-error: #b91c1c;
+  --color-error-soft: #fef2f2;
+  --color-warning: #b45309;
+  --color-warning-soft: #fffbeb;
 
-    /* Sonstiges */
-    --radius: 6px;
-    --container-width: 960px;
+  /* System-Schrift: schnell, gut lesbar, keine externe Schrift nötig */
+  --font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Arial, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lead: 1.125rem;
+  --font-size-h1: clamp(1.8rem, 3vw, 2.5rem);
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.125rem;
+  --line-height: 1.6;
+
+  /* Einheitliche Abstände */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+
+  --radius-sm: 0.5rem;
+  --radius: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+  --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --shadow-focus: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  --container-width: 1120px;
 }
