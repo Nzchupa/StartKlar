@@ -47,7 +47,7 @@ Alle Anforderungen mit Priorität: [Anforderungsdokument](docs/Sprint%201/anford
 
 ## 👥 Team
 
-Name | GitHub | Rolle |
+| Name | GitHub | Rolle |
 | Mohamad Al ajal | [@mohamadalajal-ui](https://github.com/mohamadalajal-ui) | Backend-Entwickler (Java) |
 | ali khdeir | [@khdeirali9](https://github.com/khdeirali9-ops) | Frontend,dokumentation |
 | Nazar Chuprii | [@Nzchupa](https://github.com/Nzchupa) | Backend, Repository, Sprintplanung |
