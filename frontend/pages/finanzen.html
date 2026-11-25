@@ -1,21 +1,9 @@
 <!DOCTYPE html>
-<!--
-  VORLAGE für neue Seiten. Diese Datei wird nicht verlinkt.
-
-  So legst du eine neue Seite an:
-  1. Datei kopieren und umbenennen, z. B. pages/plan-anlegen.html
-  2. <title> und den Inhalt in <main> anpassen
-  3. Falls die Seite eigenes JavaScript braucht: js/pages/plan-anlegen.js anlegen
-     und unten die auskommentierte Zeile aktivieren
-  Header, Footer und CSS-Dateien bleiben gleich, damit alle Seiten einheitlich aussehen.
--->
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finanzen – StartKlar</title>
-    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-
+    <title>Finanzen - StartKlar</title>
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/layout.css">
@@ -31,48 +19,73 @@
     <main class="site-main">
         <div class="container">
             <h1>Finanzen</h1>
-           <p>Planen Sie hier Ihre Kosten, Umsätze und den Kapitalbedarf.</p>
+            <p>Verwalten Sie hier Ihre Mitarbeiter und Kosten für die Finanzplanung.</p>
 
-        <form action="/pages/businessplan.html" method="get">
-          <section>
-            <h2>Kosten &amp; Investitionen</h2>
-            <div>
-              <label for="gruendungskosten">Gründungskosten (€):</label><br>
-              <input type="number" id="gruendungskosten" name="gruendungskosten" placeholder="z. B. 5000">
-            </div>
-            <br>
-            <div>
-              <label for="fixkosten">Monatliche Fixkosten (€):</label><br>
-              <input type="number" id="fixkosten" name="fixkosten" placeholder="z. B. 1200">
-            </div>
-          </section>
+            <section>
+                <h2>Mitarbeiter</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Rolle</th>
+                            <th>Monatslohn (€)</th>
+                            <th>Aktionen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Beispiel Max</td>
+                            <td>Entwickler</td>
+                            <td>3.500</td>
+                            <td>
+                                <button type="button">Ändern</button>
+                                <button type="button">Löschen</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button">Mitarbeiter hinzufügen</button>
+            </section>
 
-          <br>
+            <section>
+                <h2>Kostenübersicht</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kostenart</th>
+                            <td>Betrag (€)</td>
+                            <td>Aktionen</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Miete & Nebenkosten</td>
+                            <td>1.200</td>
+                            <td>
+                                <button type="button">Ändern</button>
+                                <button type="button">Löschen</button>
+                            </str>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button">Kosten hinzufügen</button>
+            </section>
 
-          <section>
-            <h2>Umsatzplanung</h2>
-            <div>
-              <label for="umsatz_monat">Erwarteter Monatsumsatz (€):</label><br>
-              <input type="number" id="umsatz_monat" name="umsatz_monat" placeholder="z. B. 3500">
-            </div>
-          </section>
-
-          <br>
-
-          <button type="submit">Speichern &amp; Weiter</button>
-        </form> 
+            <section>
+                <h2>Finanzielle Zusammenfassung</h2>
+                <div>
+                    <p>Gesamtkosten: <span id="gesamtkosten">4.700 €</span></p>
+                    <p>Gesamtumsatz: <span id="gesamtumsatz">5.000 €</span></p>
+                    <p>Ergebnis: <span id="ergebnis" style="color: var(--color-success);">+300 €</span></p>
+                </div>
+            </section>
         </div>
     </main>
 
     <footer class="site-footer">
         <div class="container">
             <span>Gruppe 5 · Hochschule Mittweida · WS 2026/27</span>
-            <span id="backend-status" class="backend-status">Backend wird geprüft …</span>
         </div>
     </footer>
-
-    <script src="/js/api.js" defer></script>
-    <script src="/js/main.js" defer></script>
-    <!-- <script src="/js/pages/seitenname.js" defer></script> -->
 </body>
 </html>
