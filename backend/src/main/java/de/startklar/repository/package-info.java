@@ -2,7 +2,7 @@
  * Repositories: der Zugriff auf gespeicherte Daten.
  *
  * <p>Ein Repository speichert, lädt und löscht Objekte aus dem Paket {@code model}.
- * Wo die Daten liegen (vorerst im Arbeitsspeicher, später in einer Datei oder Datenbank),
+ * Wo die Daten liegen (in einer lokalen H2-Datenbank),
  * weiß nur das Repository. Services müssen dafür nicht geändert werden.</p>
  *
  * <p><b>Regeln</b></p>
@@ -13,6 +13,6 @@
  *   <li>Wird nur von Services benutzt, nie direkt vom Controller.</li>
  * </ul>
  *
- * <p>Hinweis: Im aktuellen Sprint werden noch keine Daten dauerhaft gespeichert.</p>
+ * <p>Hinweis: Businesspläne werden dauerhaft in der lokalen H2-Datenbank gespeichert.</p>
  */
 package de.startklar.repository;
